@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+li,ul,img,a,div{
+	border: 0;
+	list-style:none;
+}
+
+#navbar{
+	height:auto;
+	width:auto;
+	max-height:60px;
+	min-width:990px;
+	background-color:#f4f4f5;
+	border-top:3px solid #2b3b74;
+	border-bottom:3px solid #362e2c;
+}
+
+#logo{
+	height:auto;
+	width:200px;
+}
+
+#navbar li{
+	float:left;
+	height:auto;
+	margin-right:50px;
+}
+
+#linkin{
+	margin-top:30px;
+	float:right;
+}
+
+#linkin a{
+	color:#000000;
+}
+
+#linkicon{
+	float:right;
+	margin-left:0px;
+	width:150px;
+}
+
+#turn-next{
+	width:990px;
+	text-align:center;
+	margin-top:30px;
+}
+
+#turn-next p{
+	color:#6f625b;
+	font-size:16px;
+}
+
+#about-us{
+	width:990px;
+}
+
+#about-us1 h1{
+	color:#2b3a73;
+	font-size:24px;
+}
+
+#about-us1 h2{
+	color:#9c9795;
+	font-size:17px;
+	text-indent:2em;
+	text-align:justify;
+	line-height:20px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#ab2 h1{
+	color:#323e76;
+	font-size:28px;
+}
+
+#ab2 h2{
+	color:#6d6d6d;
+	font-size:24px;
+}
+
+#products{
+	width:990px;
+	margin-top:60px;
+}
+
+#products h2{
+	color:#6d6d6d;
+	font-size:20px;
+}
+
+#1-1{
+	height:800px;
+}
+
+#1-2{
+	height:600px;
+}
+
+#title{
+	margin-bottom:20px;
+}
+
+#contuct{
+	width:990px;
+	margin-top:80px;
+}
+
+#footer{
+	background-color:#e7e8e8;
+	margin-top:50px;
+}
+
+#footer a{
+	color:#000000;
+}
+
+#footernav{
+	width:480px;
+	height:80px;
+}
+
+#footernav li{
+	margin-top:10px;
+	margin-bottom:15px;
+	float:left;
+	height:auto;
+	margin-left:40px;
+}
+
+#footernav p{
+	text-align:center;
+}
+
+#co1 p{
+	text-align:left;
+	color:#bdb0a9;
+	font-size:12px;
+}
+
+#InputName{
+	margin-bottom:10px;
+}
+
+#InputEmail{
+	margin-bottom:10px;
+}
+
+#Inputtext{
+	margin-bottom:10px;
+}
+
+#por1 h1{
+	font-size:30px;
+	color:#605c8b;
+	margin-left:-7px;
+}
+
+#por1 h2{
+	font-size:12px;
+	line-height:0.5;
+	color:#6f6e68;
+}
