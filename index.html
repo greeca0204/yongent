@@ -10,7 +10,7 @@
 </head>
 
 <body style="background-color:#f4f4f5;">
-<div class="container">
+<div class="container-fluid">
 <div class="row  navbar-fixed-top" id="navbar">
 	<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-1" id="logo">
     	<img src="img/logo.png" class="img-responsive"/>
@@ -38,6 +38,7 @@
 </div>
 </div>
 <div class="container-fluid">
+<div class="row">
 <div style="width:100%; height:60px;">
 </div>
 	<div id="home">
@@ -52,6 +53,15 @@
 			<div class="item">
 				<img src="img/post1.jpg" class="img-responsive" alt="product">
 			</div>
+            <div class="item">
+				<img src="img/post1.jpg" class="img-responsive" alt="product">
+			</div>
+            <div class="item">
+				<img src="img/post1.jpg" class="img-responsive" alt="product">
+			</div>
+            <div class="item">
+				<img src="img/post1.jpg" class="img-responsive" alt="product">
+			</div>
   		</div>
   			<!-- Controls -->
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -63,7 +73,18 @@
 			<span class="sr-only">Next</span>
 		</a>
 		</div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:60px;">
+        	 <!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+			</ol>
+        </div>
     	<!--图片墙-->
+        
         </div>
         <div class="center-block" id="turn-next">
         	<p>We only produce high-quality denim fabrics</p>
@@ -98,7 +119,7 @@
         </div>
         <div class="col-md-4 col-sm-4" id="1-2">
         	<div id="poticon"><img src="img/pot.jpg" class="img-responsive" alt="a pot"/></div>
-        	<h2>We set up our store at Guangzhou in 2009,with professionalunderstanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
+        	<h2>We set up our store at Guangzhou in 2009,with professional understanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
         </div>
         <div class="col-md-4 col-sm-4" id="1-3">
         	<img src="img/products2.jpg" class="img-responsive" alt="light blue"/>
@@ -107,17 +128,17 @@
         <div class="row">
         <div class="col-md-4 col-sm-4" id="2-1">
         	<div id="poticon"><img src="img/pot.jpg" class="img-responsive" alt="a pot"/></div>
-        	<h2>We set up our store at Guangzhou in 2009,with professionalunderstanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
+        	<h2>We set up our store at Guangzhou in 2009,with professional understanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
         </div>
         <div class="col-md-4 col-sm-4" id="2-2">
         	<img src="img/products3.jpg" class="img-responsive" alt="navy blue"/>
         </div>
         <div class="col-md-4 col-sm-4" id="2-3">
         	<div id="poticon"><img src="img/pot.jpg" class="img-responsive" alt="a pot"/></div>
-        	<h2>We set up our store at Guangzhou in 2009,with professionalunderstanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
+        	<h2>We set up our store at Guangzhou in 2009,with professional understanding of our denim fabric, our team can offer high-quality service forcustomers, and set up Guangzhou Yongent Trading Co. Ltd.</h2>
         </div>
-        <div style="float:right; margin-top:20px;">
-            	<a href="products.html"><img src="img/more.jpg" style="padding-right:100px;" alt="more"/></a>
+        <div style="float:right; margin-top:20px; margin-right:100px;">
+        	<a href="products.html"><img src="img/more.jpg" alt="more"/></a>
             </div>
         </div>
     </div>
@@ -144,10 +165,11 @@
             	<input type="text" class="form-control" id="InputName" placeholder="Name">
                 <input type="email" class="form-control" id="InputEmail" placeholder="Email">
                 <textarea class="form-control" rows="6" id="Inputtext"></textarea>
-                <input type="image" class="button" src="img/send.jpg" onClick="this.from.submit()"/>
+                <input type="image" role="button" class="button" src="img/send.jpg" id="send"/>
             </form>
         </div>
     </div>
+</div>
 </div>
 <div id="footer"> 
 	<div class="center-block" id="footernav">
@@ -171,5 +193,48 @@
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script language="javascript"> 
+	$('form :input').blur(function(){
+		var $parent = $(this).parent();
+		$parent.find(".formtips").remove();
+		//mail test
+		if( $(this).is('#InputName')){
+			if( this.value=="" || this.value.ength < 1){
+				var errorMsg = 'What is your name?';
+				$parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+			}else{
+				var okMsg = 'ok';
+				$parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+			}
+		}
+		if( $(this).is('#InputEmail')){
+			if( this.value=="" || (this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))){
+				var errorMsg = 'plase put the right email';
+				$parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+			}else{
+				var okMsg = 'ok';
+				$parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+			}
+		}
+		if( $(this).is('#Inputtext')){
+			if( this.value=="" || this.value.ength < 1){
+				var errorMsg = 'What can I do for you?';
+				$parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+			}else{
+				var okMsg = 'ok';
+				$parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+			}
+		}
+	});
+	
+	$('#send').click(function(){
+		$("form .required:input ").trigger('blur');
+		var numError = $('form .onError').length;
+		if(numError){
+			return false;
+		}
+		alert("successed");
+	});
+</script>
 </body>
 </html>
