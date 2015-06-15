@@ -205,3 +205,21 @@ li,ul,img,a,div{
 #co2 td{
 	width:400px;
 }
+
+input[type="button"], input[type="submit"] {
+    padding:4px 10px;
+    background-color:#FFF;
+    text-align:center;
+    border-radius:5px;
+    overflow:hidden;
+    min-width:60px;
+    border:none;
+	color:#3c6db0;
+	box-shadow:1px 1px 1px rgba(75,75,75,0.3);
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+    background-color:#D7F3FF;
+}
+input[type="button"]:active, input[type="submit"]:active {
+    background-color:#6DC2FF;
+}
