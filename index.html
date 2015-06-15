@@ -23,16 +23,16 @@
     </div>
     <nav id="linkin">
         	<li>
-            	<a href="#home">HOME</a>
+            	<a href="#home" onclick="click_scroll();">HOME</a>
             </li>
             <li>
-            	<a href="#about-us">ABOUT US</a>
+            	<a href="#about-us" onclick="click_scroll2();">ABOUT US</a>
             </li>
             <li>
-            	<a href="#products">PRODUCTS</a>
+            	<a href="#products" onclick="click_scroll3();">PRODUCTS</a>
             </li>
             <li>
-            	<a href="#contuct">CONTACT US</a>
+            	<a href="#contuct" onclick="click_scroll4();">CONTACT US</a>
             </li>
     </nav>
 </div>
@@ -185,16 +185,16 @@
 	<div class="center-block" id="footernav">
 	<nav>
         	<li>
-            	<a href="#home">HOME</a>
+            	<a href="#home" onclick="click_scroll();">HOME</a>
             </li>
             <li>
-            	<a href="#about-us">ABOUT US</a>
+            	<a href="#about-us" onclick="click_scroll2();">ABOUT US</a>
             </li>
             <li>
-            	<a href="#products">PRODUCTS</a>
+            	<a href="#products" onclick="click_scroll3();">PRODUCTS</a>
             </li>
             <li>
-            	<a href="#contuct">CONTACT US</a>
+            	<a href="#contuct" onclick="click_scroll4();">CONTACT US</a>
             </li>
     </nav>
     <p>Copyright  c 2015 by Ranical Lifestly.All Rights Reserved.</p>
@@ -209,5 +209,31 @@ $(document).ready(function(){
 	$('#reg-form').easyform();
 });
 </script>
+ <script type="text/javascript">
+ function click_scroll() {
+  var scroll_offset = $("#home").offset(); //得到pos这个div层的offset，包含两个值，top和left
+  $("body,html").animate({
+   scrollTop:scroll_offset.top  //让body的scrollTop等于pos的top，就实现了滚动
+   },1000);
+ }
+ function click_scroll2() {
+  var scroll_offset = $("#about-us").offset(); //得到pos这个div层的offset，包含两个值，top和left
+  $("body,html").animate({
+   scrollTop:scroll_offset.top  //让body的scrollTop等于pos的top，就实现了滚动
+   },1000);
+ }
+ function click_scroll3() {
+  var scroll_offset = $("#products").offset(); //得到pos这个div层的offset，包含两个值，top和left
+  $("body,html").animate({
+   scrollTop:scroll_offset.top  //让body的scrollTop等于pos的top，就实现了滚动
+   },1000);
+ }
+ function click_scroll4() {
+  var scroll_offset = $("#contuct").offset(); //得到pos这个div层的offset，包含两个值，top和left
+  $("body,html").animate({
+   scrollTop:scroll_offset.top  //让body的scrollTop等于pos的top，就实现了滚动
+   },1000);
+ }
+ </script>
 </body>
 </html>
